@@ -1,0 +1,7 @@
+Invited <%= @resource.email %>
+
+<%= "http://localhost:8080/accept?invitation_token=#{@token}" %>
+
+<% if @resource.invitation_due_at %>
+  Expiration date: <%= @resource.invitation_due_at %>
+<% end %>

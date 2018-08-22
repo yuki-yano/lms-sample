@@ -1,0 +1,17 @@
+/.bundle
+
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+/config/master.key
+
+/vendor/bundle
+/vendor/bin
+
+/frontend/dist
+/node_modules

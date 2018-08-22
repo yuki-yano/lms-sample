@@ -1,0 +1,23 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: pw
+
+development:
+  <<: *default
+  database: lms
+  host: 127.0.0.1
+  port: 4000
+
+test:
+  <<: *default
+  database: lms-test
+  host: 127.0.0.1
+  port: 4000
+
+production:
+  <<: *default
+  url:  <%= ENV["DATABASE_URL"] %>
+  pool: <%= ENV["DB_POOL"] || ENV['MAX_THREADS'] || 5 %>
